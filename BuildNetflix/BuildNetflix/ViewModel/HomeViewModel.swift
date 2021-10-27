@@ -10,7 +10,7 @@ import SwiftUI
 
 class HomeViewModel : ObservableObject{
     
-    @Published var movies : [String:[Movie]] = [:] // inislization was empty
+    @Published var movies:[String:[Movie]] = [:] // inislization was empty
     
     public var allCategories : [String]{
         return movies.keys.map{
@@ -26,7 +26,7 @@ class HomeViewModel : ObservableObject{
         setUpMovies()
     }
     
-    func setUpMovies(){
+    private func setUpMovies(){
         movies["Trending Now"] = mocDataArray
         movies["Stand-Up Comedy"] = mocDataArray.shuffled()
         movies["New Movies"] = mocDataArray.shuffled()

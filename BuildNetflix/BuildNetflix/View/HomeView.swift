@@ -13,7 +13,9 @@ struct HomeView: View {
         ZStack{
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            ScrollView(showsIndicators: true){   LazyVStack{
+            ScrollView(showsIndicators: true){
+                LazyVStack{
+                    TopMovieView(movie: mockData)
                 ForEach(viewModel.allCategories,id:\.self){ catgory in
                     VStack {
                         HStack {
