@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
+    //Properties
     var viewModel = HomeViewModel()
+    
+    
     var body: some View {
         ZStack{
             Color.black
@@ -16,6 +19,9 @@ struct HomeView: View {
             ScrollView(showsIndicators: true){
                 LazyVStack{
                     TopMovieView(movie: mockData)
+                        .frame(width:screen.width)
+                        .padding(.top,-100)
+                        
                 ForEach(viewModel.allCategories,id:\.self){ catgory in
                     VStack {
                         HStack {

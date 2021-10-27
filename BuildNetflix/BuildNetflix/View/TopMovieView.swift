@@ -43,7 +43,7 @@ struct TopMovieView: View {
                     Spacer()
                     
                     SamllVerticalButtonView(test: "My List", isOnImage: "checkmark", isOffImage: "plus", isOn: true){
-                         // action come from
+                        // action come from
                     }
                     
                     Spacer()
@@ -55,17 +55,21 @@ struct TopMovieView: View {
                     Spacer()
                     
                     SamllVerticalButtonView(test: "Info", isOnImage: "info.circle", isOffImage: "info.circle", isOn: true){
-                         // action come from
+                        // action come from
                     }
                     
                     Spacer()
                 }
             }
-        }.onAppear{
+            .background(LinearGradient.blackOpacityGradient)
+            .padding(.top,250)
+        }
+        .onAppear{
             self.topMovieVM = TopMovieViewModel(movie: movie)
-            //            print(self.topMovieVM.movie)
+            
         }
         .foregroundColor(.white)
+        
         
     }
 }
