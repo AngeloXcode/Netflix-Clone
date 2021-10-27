@@ -27,7 +27,8 @@ class HomeViewModel : ObservableObject{
     }
     
     func setUpMovies(){
-        movies["Trending Now"] = [mockData]
+        movies["Trending Now"] = mocDataArray
+        movies["Stand-Up Comedy"] = mocDataArray
     }
 }
 
