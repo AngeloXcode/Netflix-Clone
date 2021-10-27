@@ -11,10 +11,15 @@ import SwiftUI
 class HomeViewModel : ObservableObject{
     
     @Published var movies : [String:[Movie]] = [:] // inislization was empty
+    
     public var allCategories : [String]{
         return movies.keys.map{
             String($0)
         }
+    }
+    
+    public func getMovieWhereCategory(_ category:String) -> [Movie] {
+        return movies[category] ?? []
     }
     
     init(){

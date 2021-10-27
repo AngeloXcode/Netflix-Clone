@@ -22,7 +22,7 @@ struct HomeView: View {
                     }
                     ScrollView(.horizontal,showsIndicators: false){
                         HStack{
-                            ForEach(viewModel.getMovie(catgory)){ movie in
+                            ForEach(viewModel.getMovieWhereCategory(catgory)){ movie in
                                 StandardHomeMovieView(movie: movie)
                                     .frame(width:100,height:200)
                                     .padding(.horizontal,20)
