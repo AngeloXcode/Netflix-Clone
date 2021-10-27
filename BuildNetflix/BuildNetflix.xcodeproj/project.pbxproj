@@ -19,6 +19,7 @@
 		5C4B939A2729642B00F7AA91 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B93992729642B00F7AA91 /* Movie.swift */; };
 		5C4B939C2729658C00F7AA91 /* StandardHomeMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B939B2729658C00F7AA91 /* StandardHomeMovieView.swift */; };
 		5C4B939F272965DF00F7AA91 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B939E272965DF00F7AA91 /* GlobalHelpers.swift */; };
+		5C4B93A2272967DA00F7AA91 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B93A1272967DA00F7AA91 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		5C4B93992729642B00F7AA91 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		5C4B939B2729658C00F7AA91 /* StandardHomeMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHomeMovieView.swift; sourceTree = "<group>"; };
 		5C4B939E272965DF00F7AA91 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
+		5C4B93A1272967DA00F7AA91 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		5C4B9366272961EF00F7AA91 /* BuildNetflix */ = {
 			isa = PBXGroup;
 			children = (
+				5C4B93A0272967BF00F7AA91 /* ViewModel */,
 				5C4B939D272965CB00F7AA91 /* Helpers */,
 				5C4B93982729640F00F7AA91 /* View */,
 				5C4B93972729640900F7AA91 /* App */,
@@ -171,6 +174,14 @@
 				5C4B939E272965DF00F7AA91 /* GlobalHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5C4B93A0272967BF00F7AA91 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5C4B93A1272967DA00F7AA91 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +322,7 @@
 			files = (
 				5C4B939F272965DF00F7AA91 /* GlobalHelpers.swift in Sources */,
 				5C4B93922729621A00F7AA91 /* HomeView.swift in Sources */,
+				5C4B93A2272967DA00F7AA91 /* HomeViewModel.swift in Sources */,
 				5C4B936A272961EF00F7AA91 /* ContentView.swift in Sources */,
 				5C4B939A2729642B00F7AA91 /* Movie.swift in Sources */,
 				5C4B9368272961EF00F7AA91 /* BuildNetflixApp.swift in Sources */,
