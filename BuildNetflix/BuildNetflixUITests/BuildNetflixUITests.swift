@@ -1,13 +1,13 @@
 //
-//  Netflix_CloneUITests.swift
-//  Netflix CloneUITests
+//  BuildNetflixUITests.swift
+//  BuildNetflixUITests
 //
 //  Created by Angelo Essam on 27/10/2021.
 //
 
 import XCTest
 
-class Netflix_CloneUITests: XCTestCase {
+class BuildNetflixUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -1,13 +1,13 @@
 //
-//  Netflix_CloneUITestsLaunchTests.swift
-//  Netflix CloneUITests
+//  BuildNetflixUITestsLaunchTests.swift
+//  BuildNetflixUITests
 //
 //  Created by Angelo Essam on 27/10/2021.
 //
 
 import XCTest
 
-class Netflix_CloneUITestsLaunchTests: XCTestCase {
+class BuildNetflixUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

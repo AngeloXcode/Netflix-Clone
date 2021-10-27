@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Netflix Clone
+//  BuildNetflix
 //
 //  Created by Angelo Essam on 27/10/2021.
 //
