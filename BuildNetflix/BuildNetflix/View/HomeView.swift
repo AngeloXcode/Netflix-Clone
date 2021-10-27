@@ -13,16 +13,17 @@ struct HomeView: View {
         ZStack{
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            VStack{
-                
+            ScrollView(showsIndicators: true){   LazyVStack{
                 ForEach(viewModel.allCategories,id:\.self){ catgory in
                     VStack {
                         HStack {
                             Text(catgory)
+                                .font(.title3)
+                                .bold()
                             Spacer()
                         }
                         ScrollView(.horizontal,showsIndicators: false){
-                            HStack{
+                            LazyHStack{
                                 ForEach(viewModel.getMovieWhereCategory(catgory)){ movie in
                                     StandardHomeMovieView(movie: movie)
                                         .frame(width:100,height:200)
@@ -36,6 +37,7 @@ struct HomeView: View {
                         
                 } // end of for loop
             }
+            } //end of ScrollView
         }.foregroundColor(.white)
     }
 }

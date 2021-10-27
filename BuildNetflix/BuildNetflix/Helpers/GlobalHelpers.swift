@@ -8,7 +8,7 @@
 import Foundation
 
 
-let mockData = Movie(id: UUID().uuidString, name: "No Time To Die", thumbnailUrl: URL(string: "https://i.picsum.photos/id/335/200/300.jpg?hmac=G81PbTg8uAk00mCq0eZdiTJwpa_-_FvFZJVhEGcouXQ")!)
+let mockData = Movie(id: UUID().uuidString, name: "No Time To Die", thumbnailUrl: URL(string: "https://i.picsum.photos/id/335/200/301.jpg?hmac=G81PbTg8uAk00mCq0eZdiTJwpa_-_FvFZJVhEGcouXQ")!)
 
 let mockData1 = Movie(id: UUID().uuidString, name: "Arrebato (Rapture)", thumbnailUrl: URL(string: "https://i.picsum.photos/id/335/200/300.jpg?hmac=G81PbTg8uAk00mCq0eZdiTJwpa_-_FvFZJVhEGcouXQ")!)
 

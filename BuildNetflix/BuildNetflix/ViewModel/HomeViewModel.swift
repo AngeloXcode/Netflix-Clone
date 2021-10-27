@@ -28,7 +28,12 @@ class HomeViewModel : ObservableObject{
     
     func setUpMovies(){
         movies["Trending Now"] = mocDataArray
-        movies["Stand-Up Comedy"] = mocDataArray
+        movies["Stand-Up Comedy"] = mocDataArray.shuffled()
+        movies["New Movies"] = mocDataArray.shuffled()
+        movies["New Release"] = mocDataArray.shuffled()
+        movies["Watch It Again"] = mocDataArray.shuffled()
+        movies["SCI"] = mocDataArray.shuffled()
+     
     }
 }
 
