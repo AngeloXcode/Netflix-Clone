@@ -8,7 +8,17 @@
 import Foundation
 
 
-//struct Episode : Identifiable{
-//
-//    
-//}
+struct Episode : Identifiable{
+
+    var id = UUID().uuidString
+    var nam    : String
+    var season : String
+    var thumbnailImagesURLString : String
+    var describption : String
+    var length : Int
+    
+    var thumbnailUrl : URL {
+        return URL(string:thumbnailImagesURLString)!
+    }
+    
+}

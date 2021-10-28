@@ -11,7 +11,7 @@ struct PlayButtonView: View {
     // property
     var test : String
     var ImageName : String
-    
+    var backgroundColor : Color = Color.white
     // Cloure
     var action : () -> Void
     
@@ -31,8 +31,8 @@ struct PlayButtonView: View {
                 Spacer()
             }
             .padding(.vertical,6)
-            .foregroundColor(Color.black)
-            .background(Color.white)
+            .foregroundColor(backgroundColor == .white ? .black : .white )
+            .background(backgroundColor)
             .cornerRadius(3.0)
         })
         

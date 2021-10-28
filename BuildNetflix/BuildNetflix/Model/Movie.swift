@@ -18,7 +18,8 @@ struct Movie : Identifiable{
     var year : Int
     var rating : String
     var numberOfSeasons : Int?
-    
+    //
+    var episode : [Episode]?
     var numberOfSeasonsDisplay : String {
         if let num = numberOfSeasons {
             if num == 1 {
@@ -29,4 +30,5 @@ struct Movie : Identifiable{
         }
         return ""
     }
+    var promtionHeadLine : String?
 }

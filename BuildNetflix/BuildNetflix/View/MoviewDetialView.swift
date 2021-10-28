@@ -32,6 +32,15 @@ struct MoviewDetialView: View {
                         StandardHomeMovieView(movie: movie)
                             .frame(width: screen.width / 2.5)
                         MovieInfoSubheadlineView(movie:movie)
+                        if movie.promtionHeadLine != nil {
+                            Text(movie.promtionHeadLine!)
+                                .bold()
+                                .font(.headline)
+                        }
+                        
+                        PlayButtonView(test: "Play", ImageName: "play.fill",backgroundColor:.red) {
+                            //
+                        }
                     }
                 }
                 Spacer()
@@ -53,16 +62,34 @@ struct MovieInfoSubheadlineView : View {
     var movie:Movie
     ///Body
     var body: some View {
-        HStack{
+        HStack(spacing:20){
             Image(systemName: "hand.thumbsup.fill")
                 .foregroundColor(.white )
             
             Text(String(movie.year))
             
-            Text("RATING")
+            RatingView(rating: String(movie.rating))
             
             Text(movie.numberOfSeasonsDisplay)
         }.foregroundColor(.gray)
             .padding(.vertical,6)
+    }
+}
+
+
+struct RatingView : View{
+    //Properties
+    var rating:String
+    //Body
+    var body: some View{
+        ZStack{
+            Rectangle()
+                .foregroundColor(.gray)
+            
+            Text(rating)
+                .foregroundColor(.white)
+                .font(.system(size: 12))
+                .bold()
+        }.frame(width: 50, height:20)
     }
 }
