@@ -22,6 +22,10 @@ struct Episode : Identifiable{
         return URL(string:thumbnailImagesURLString)!
     }
     
+    
+    var videoURL : URL
+    var episodesNumeber : Int
+    
 }
 
 struct CurrentEpisodeInfo : Hashable, Equatable {

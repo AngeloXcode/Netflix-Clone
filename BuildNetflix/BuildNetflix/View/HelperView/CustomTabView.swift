@@ -56,7 +56,8 @@ struct CustomTabView: View {
                     SamllVerticalButtonView(test: "Test", isOnImage: "", isOffImage: "", isOn: true ){
                     }
                 case .trailers:
-                    TrailersView(movies: movies.moreLikeThisMovie)
+                    TrailersView(trailers: movies.movieTrailer)
+//                    TrailersView(movies: movies.moreLikeThisMovie)
                 case .more:
                     MoreLikeThisView(movies: movies.moreLikeThisMovie)
                 }

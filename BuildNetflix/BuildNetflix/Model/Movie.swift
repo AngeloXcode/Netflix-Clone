@@ -58,5 +58,6 @@ struct Movie : Identifiable{
     
     //
     var moreLikeThisMovie : [Movie]
+    var movieTrailer      : [Trailer]
     
 }

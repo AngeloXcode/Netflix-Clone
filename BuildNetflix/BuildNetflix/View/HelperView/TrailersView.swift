@@ -9,15 +9,29 @@ import SwiftUI
 
 struct TrailersView: View {
     //properties
-    var 
+    var trailers : [Trailer]
+  
     //Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            ForEach(trailers){ trailer in
+                VStack(alignment:.leading){
+                    VideoPreviewImageView(imageURL: trailer.thumbnailUrl , videoURL: trailer.videoUrl)
+                        .frame(maxWidth:screen.width)
+                    Text(trailer.name)
+                        .font(.headline)
+                }.foregroundColor(.white )
+                .padding(.vertical,10)
+            }
+        }
     }
 }
 
 struct TrailersView_Previews: PreviewProvider {
     static var previews: some View {
-        TrailersView()
+        ZStack{
+            Color.black.edgesIgnoringSafeArea(.all)
+            TrailersView(trailers: trailerExmpleArray)
+        }
     }
 }

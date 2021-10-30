@@ -11,14 +11,17 @@ import AVKit
 struct VideoView: View {
     //Properties
     var url : URL
+    private var palyer :AVPlayer{
+        AVPlayer(url: url)
+    }
     //Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VideoPlayer(player: palyer)
     }
 }
 
 struct VideoView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoView()
+        VideoView(url: exmpleVideoURL)
     }
 }

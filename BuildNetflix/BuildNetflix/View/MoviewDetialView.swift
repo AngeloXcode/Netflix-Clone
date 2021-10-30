@@ -10,6 +10,10 @@ import SwiftUI
 struct MoviewDetialView: View {
     //properties
     var movie:Movie
+    @State private var showSeasonsPicker = false
+    @State private var selectedSession   = 1
+
+    
     ///Body
     var body: some View {
         ZStack{
@@ -64,7 +68,7 @@ struct MoviewDetialView: View {
                         }
                         .padding(.leading,20)
                         
-//                        CustomTabVie
+//                        CustomTabVieW
                     } // end of VStack
                 }.padding(.horizontal,10)
                 Spacer()
