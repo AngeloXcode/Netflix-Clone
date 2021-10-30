@@ -17,6 +17,10 @@ enum  CustomTab : String{
 struct CustomTabView: View {
     //properties
     @State private var currentTab : CustomTab = .episodes
+    
+    @Binding var  showSeasonsPicker : Bool
+    @Binding  var selectedSession     : Int
+    
     var tabs   : [CustomTab]
     var movies : Movie
     func widthForTab(_ tab : CustomTab) -> CGFloat{
@@ -53,8 +57,7 @@ struct CustomTabView: View {
                 //Selected View
                 switch currentTab {
                 case .episodes:
-                    SamllVerticalButtonView(test: "Test", isOnImage: "", isOffImage: "", isOn: true ){
-                    }
+                    EpisodesView(episodes: movies.episode, showSeasonsPicker:$showSeasonsPicker , selectedSession:$selectedSession)
                 case .trailers:
                     TrailersView(trailers: movies.movieTrailer)
 //                    TrailersView(movies: movies.moreLikeThisMovie)
@@ -72,7 +75,7 @@ struct CustomTabView_Previews: PreviewProvider {
         ZStack{
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            CustomTabView(tabs: [.episodes,.trailers,.more],movies:mockData1)
+            CustomTabView(showSeasonsPicker: .constant(true), selectedSession: .constant(1), tabs: [.episodes,.trailers,.more],movies:mockData1)
         }
     }
 }

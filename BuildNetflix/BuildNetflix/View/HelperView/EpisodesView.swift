@@ -20,14 +20,14 @@ struct EpisodesView: View {
     
     //Body
     var body: some View {
-        VStack{
+        VStack(spacing:14){
             HStack{
                 Button(action:{
                     //action
                     showSeasonsPicker.toggle()
                 },label: {
                     Group{
-                        Text("Session 1")
+                        Text("Session \(selectedSession)")
                         Image(systemName: "chevron.down")
                     }.font(.system(size: 16.0))
                     Spacer()
@@ -35,12 +35,33 @@ struct EpisodesView: View {
             } // end of HStack
             // end of Episodes List
             ForEach(getEpisodes(forSeason: selectedSession)){ episode in
-                Text("Text")
+                VStack(alignment:.leading){
+                    HStack{
+                        VideoPreviewImageView(imageURL: episode.thumbnailUrl , videoURL: episode.videoURL)
+                            .frame(width: 120, height:70)
+                            .clipped() 
+                        VStack(alignment:.leading){
+                            Text("\(episode.episodeNumber). \(episode.nam) ")
+                            Text("\(episode.length)m")
+                                .font(.system(size:12))
+                        }
+                        Spacer()
+                       Image(systemName: "arrow.down.to.line.alt")
+                            .font(.system(size: 16))
+                    }
+                  
+                    
+                    //Describtion
+                    Text(episode.describption)
+                        .font(.system(size: 13))
+                        .lineLimit(3)
+                }.padding(.bottom,20)
             }
             Spacer()
 
         }// end of VStack
         .foregroundColor(.white)
+        .padding(.horizontal,20)
     }
 }
 

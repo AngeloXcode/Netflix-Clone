@@ -12,7 +12,7 @@ struct MoviewDetialView: View {
     var movie:Movie
     @State private var showSeasonsPicker = false
     @State private var selectedSession   = 1
-
+    
     
     ///Body
     var body: some View {
@@ -51,7 +51,7 @@ struct MoviewDetialView: View {
                         CastInfo(movie: movie)
                         
                         HStack(spacing:60){
-                        
+                            
                             SamllVerticalButtonView(test: "My List", isOnImage: "checkmark", isOffImage: "plus", isOn: true){
                                 
                             }
@@ -64,16 +64,48 @@ struct MoviewDetialView: View {
                             SamllVerticalButtonView(test: "Share", isOnImage: "square.and.arrow.up", isOffImage:"square.and.arrow.up", isOn: true){
                                 
                             }
-                           Spacer()
+                            Spacer()
                         }
                         .padding(.leading,20)
-                        
-//                        CustomTabVieW
+                        CustomTabView(showSeasonsPicker: $showSeasonsPicker, selectedSession: $selectedSession, tabs: [.episodes,.trailers,.more], movies:movie)
+                    
                     } // end of VStack
                 }.padding(.horizontal,10)
                 Spacer()
             }.foregroundColor(.white)
-          
+            
+            if showSeasonsPicker {
+                Group {
+                    Color.black.opacity(0.8).edgesIgnoringSafeArea(.all)
+                    VStack(spacing:40){
+                        Spacer()
+                        ForEach(0..<(movie.numberOfSeasons ?? 0)){ Season in
+                            Button(action:{
+                                self.selectedSession = Season + 1
+                                self.showSeasonsPicker.toggle()
+                                
+                            },label: {
+                                Text("Season \(Season+1)")
+                                    .foregroundColor((self.selectedSession == Season + 1) ? .white : .gray)
+                                    .bold()
+                                    .font((self.selectedSession == Season + 1) ? .title  : .title2)
+                            })
+                            
+                        }
+                        Spacer()
+                        Button(action:{
+                            self.showSeasonsPicker.toggle()
+                        },label:{
+                            Image(systemName: "x.circle.fill")
+                                .foregroundColor(.white)
+                                .font(.system(size: 40.0))
+                                .scaleEffect(x:1.1)
+                        }).padding(.bottom,30)
+                    }
+                    
+                }.edgesIgnoringSafeArea(.all)
+            }
+            
         }
     }
 }

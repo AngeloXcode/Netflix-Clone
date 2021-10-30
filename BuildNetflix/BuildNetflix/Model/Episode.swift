@@ -24,7 +24,7 @@ struct Episode : Identifiable{
     
     
     var videoURL : URL
-    var episodesNumeber : Int
+    var episodeNumber : Int
     
 }
 

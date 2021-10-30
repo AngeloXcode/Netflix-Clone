@@ -17,7 +17,7 @@ let mockData = Movie(id: UUID().uuidString,
                      thumbnailUrl: URL(string: "https://i.picsum.photos/id/335/200/300.jpg?hmac=G81PbTg8uAk00mCq0eZdiTJwpa_-_FvFZJVhEGcouXQ")!, category: ["Dystopian","Suspenseful","Exciting"],
                      year: 1955,
                      rating: "TV-MA",
-                     numberOfSeasons: 1,
+                     numberOfSeasons: 1, episode: allExamplesEpisodes,
                      promtionHeadLine:"WATCH SEASONS 6 NOW",
                      defaultEpisodeInfo: mockCurrentEpisode1,
                      creators :"Robert De Niro,Jack Nicholson,Marlon Brando",
@@ -29,7 +29,7 @@ let mockData1 = Movie(id: UUID().uuidString,
                       thumbnailUrl: URL(string: "https://i.picsum.photos/id/335/200/300.jpg?hmac=G81PbTg8uAk00mCq0eZdiTJwpa_-_FvFZJVhEGcouXQ")!, category:  ["Dystopian","Suspenseful","Exciting"],
                       year: 1955,
                       rating: "TV-MA",
-                      numberOfSeasons: 2,
+                      numberOfSeasons: 2, episode: allExamplesEpisodes,
                       promtionHeadLine:"WATCH SEASONS 2 NOW",
                       defaultEpisodeInfo: mockCurrentEpisode1,
                       creators:"Robert De Niro,Jack Nicholson,Marlon Brando",
@@ -40,7 +40,7 @@ let mockData2 = Movie(id: UUID().uuidString,
                       name: "Dune",
                       thumbnailUrl: URL(string: "https://i.picsum.photos/id/335/200/300.jpg?hmac=G81PbTg8uAk00mCq0eZdiTJwpa_-_FvFZJVhEGcouXQ")!, category:  ["Dystopian","Suspenseful","Exciting"],
                       year: 1955, rating: "TV-MA",
-                      numberOfSeasons: 3,
+                      numberOfSeasons: 3, episode: allExamplesEpisodes,
                       promtionHeadLine:"WATCH SEASONS 3 NOW",
                       defaultEpisodeInfo: mockCurrentEpisode1,
                       creators:"Robert De Niro,Jack Nicholson,Marlon Brando",
@@ -51,7 +51,7 @@ let mockData3 = Movie(id: UUID().uuidString, name: "The French Dispatch",
                       thumbnailUrl: URL(string: "https://i.picsum.photos/id/335/200/300.jpg?hmac=G81PbTg8uAk00mCq0eZdiTJwpa_-_FvFZJVhEGcouXQ")!, category:  ["Dystopian","Suspenseful","Exciting"],
                       year: 1955,
                       rating: "TV-MA",
-                      numberOfSeasons: 4,
+                      numberOfSeasons: 4, episode: allExamplesEpisodes,
                       promtionHeadLine:"WATCH SEASONS 5 NOW",
                       defaultEpisodeInfo: mockCurrentEpisode1,
                       creators:"Robert De Niro,Jack Nicholson,Marlon Brando",
@@ -63,7 +63,7 @@ let mockData4 = Movie(id: UUID().uuidString,
                       thumbnailUrl: URL(string: "https://i.picsum.photos/id/335/200/300.jpg?hmac=G81PbTg8uAk00mCq0eZdiTJwpa_-_FvFZJVhEGcouXQ")!, category:  ["Dystopian","Suspenseful","Exciting"],
                       year: 1955,
                       rating: "TV-MA",
-                      numberOfSeasons: 5,
+                      numberOfSeasons: 5, episode: allExamplesEpisodes,
                       promtionHeadLine:"WATCH SEASONS 5 NOW",
                       defaultEpisodeInfo: mockCurrentEpisode1,
                       creators:"Robert De Niro,Jack Nicholson,Marlon Brando",
@@ -74,7 +74,7 @@ let mockData5 = Movie(id: UUID().uuidString,
                       name: "Runt",
                       thumbnailUrl: URL(string: "https://i.picsum.photos/id/335/200/300.jpg?hmac=G81PbTg8uAk00mCq0eZdiTJwpa_-_FvFZJVhEGcouXQ")!, category:  ["Dystopian","Suspenseful","Exciting"],
                       year: 1955, rating: "TV-MA",
-                      numberOfSeasons: 6,
+                      numberOfSeasons: 6, episode: allExamplesEpisodes,
                       promtionHeadLine:"WATCH SEASONS 6 NOW",
                       defaultEpisodeInfo: mockCurrentEpisode1,
                       creators:"Robert De Niro,Jack Nicholson,Marlon Brando",
@@ -110,32 +110,32 @@ let trailer6 = Trailer(name: "Marvel 2 3 Trailer", videoUrl: exmpleVideoURL, thu
 let trailerExmpleArray : [Trailer] = [trailer1,trailer2,trailer3,trailer4,trailer5,trailer6]
 
 
-let episodes1 = Episode(nam:  "Beginnings and Endings", season: "1", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodesNumeber: 3)
+let episodes1 = Episode(nam:  "Beginnings and Endings", season: "1", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodeNumber: 3)
 
 
-let episodes2 = Episode(nam:  "Beginnings and Endings", season: "1", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodesNumeber: 3)
-
-
-
-let episodes3 = Episode(nam:  "Beginnings and Endings", season: "1", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodesNumeber: 3)
+let episodes2 = Episode(nam:  "Beginnings and Endings", season: "1", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodeNumber: 3)
 
 
 
-let episodes4 = Episode(nam:  "Beginnings and Endings", season: "1", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodesNumeber: 3)
-
-
-let episodes5 = Episode(nam:  "Beginnings and Endings", season: "2", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodesNumeber: 3)
-
-
-let episodes6 = Episode(nam:  "Beginnings and Endings", season: "2", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodesNumeber: 3)
+let episodes3 = Episode(nam:  "Beginnings and Endings", season: "1", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodeNumber: 3)
 
 
 
-let episodes7 = Episode(nam:  "Beginnings and Endings", season: "2", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodesNumeber: 3)
+let episodes4 = Episode(nam:  "Beginnings and Endings", season: "1", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodeNumber: 3)
+
+
+let episodes5 = Episode(nam:  "Beginnings and Endings", season: "2", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodeNumber: 3)
+
+
+let episodes6 = Episode(nam:  "Beginnings and Endings", season: "2", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodeNumber: 3)
 
 
 
-let episodes8 = Episode(nam:  "Beginnings and Endings", season: "2", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodesNumeber: 3)
+let episodes7 = Episode(nam:  "Beginnings and Endings", season: "2", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodeNumber: 3)
+
+
+
+let episodes8 = Episode(nam:  "Beginnings and Endings", season: "2", thumbnailImagesURLString: "https://source.unsplash.com/random" , describption: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", length: 56, videoURL: exmpleVideoURL, episodeNumber: 3)
 
 let allExamplesEpisodes = [episodes1,episodes2,episodes3,episodes4,episodes5,episodes6,episodes7,episodes8]
 
